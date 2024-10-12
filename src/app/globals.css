@@ -16,14 +16,16 @@
 }
 
 .hidden-element {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0s, opacity 0.5s ease;
 }
 
 .parent-element:hover .hidden-element {
-  color: blue;
-  display: block;
-  margin: auto;
-  border-radius: 5px;
+  color: green;
+  visibility: visible;
+  opacity: 1;
 }
 
 @layer base {

@@ -67,29 +67,74 @@ export default function Home() {
                 </div>
                 <div className="sm:w-[30vw] flex justify-evenly items-center">
                   <li>
-                    <select name="" id="" className="font-semibold text-base hover:cursor-pointer bg-gray-900">
+                    <select name="" id="" className="hover:outline hover:p-1 hover:rounded font-semibold text-base hover:cursor-pointer bg-gray-900">
                       <option value="English">English</option>
                       <option value="Hindi">Hindi</option>
                     </select>
                   </li>
                   <li>
                     <div className="text-center">
-                      <div className="hover:cursor-pointer">
-                        <div className="text-sm">Hello, sign in</div>
-                        <div className="parent-element font-semibold">Account & Lists
-                          <div className="hidden-element font-semibold">
-                            <div className="text-sm">
-                              <div>
-                                <button type="submit" className="hover:underline w-full p-2 bg-blue-500 rounded">Sign In</button>
-                              </div>
-                              <div>New Customer? <span className="text-blue-400 hover:cursor-pointer hover:underline">Start here.</span></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div></div>
-                          <div></div>
-                        </div>
+                      <div className="hover:cursor-pointer hover:outline hover:p-1 hover:rounded">
+                        <DropdownMenu>
+                          <DropdownMenuTrigger>
+                            <div className="text-sm">Hello, sign in</div>
+                            <div className="parent-element font-semibold">Account & Lists</div>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent className="w-56 bg-gray-900">
+                            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuGroup>
+                              <DropdownMenuItem>
+                                Profile
+                                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                              </DropdownMenuItem>
+                              <DropdownMenuItem>
+                                Billing
+                                <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                              </DropdownMenuItem>
+                              <DropdownMenuItem>
+                                Settings
+                                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+                              </DropdownMenuItem>
+                              <DropdownMenuItem>
+                                Keyboard shortcuts
+                                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+                              </DropdownMenuItem>
+                            </DropdownMenuGroup>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuGroup>
+                              <DropdownMenuItem>Team</DropdownMenuItem>
+                              <DropdownMenuSub>
+                                <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
+                                <DropdownMenuPortal>
+                                  <DropdownMenuSubContent>
+                                    <DropdownMenuItem>Email</DropdownMenuItem>
+                                    <DropdownMenuItem>Message</DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>More...</DropdownMenuItem>
+                                  </DropdownMenuSubContent>
+                                </DropdownMenuPortal>
+                              </DropdownMenuSub>
+                              <DropdownMenuItem>
+                                New Team
+                                <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
+                              </DropdownMenuItem>
+                            </DropdownMenuGroup>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>GitHub</DropdownMenuItem>
+                            <DropdownMenuItem>Support</DropdownMenuItem>
+                            <DropdownMenuItem disabled>API</DropdownMenuItem>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>
+                              Log out
+                              <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+                            </DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      </div>
+                      <div>
+                        <div></div>
+                        <div></div>
                       </div>
                     </div>
                     {/* <DropdownMenu>
@@ -165,8 +210,8 @@ export default function Home() {
               </ul>
             </nav>
           </section>
-        </article>
-      </main>
+        </article >
+      </main >
     </>
   );
 }
